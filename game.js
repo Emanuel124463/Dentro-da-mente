@@ -8,7 +8,7 @@ const K={};
 let playerName='';
 const nameScreen=document.getElementById('nameScreen'),nameInput=document.getElementById('nameInput'),startBtn=document.getElementById('startBtn'),nameError=document.getElementById('nameError');
 function openNameScreen(){nameScreen.style.display='flex';nameInput.value=playerName;nameError.textContent='';setTimeout(()=>nameInput.focus(),50)}
-function startGameWithName(){const n=nameInput.value.replace(/\s+/g,' ').trim();if(n.length<2){nameError.textContent='Digite um nome com pelo menos 2 caracteres.';nameInput.focus();return}playerName=n.slice(0,16);nameScreen.style.display='none';init();S.mode='play';load('room');say([[playerName,'Onde eu estou?'],['Voz','Você está dentro de você mesmo.'],[playerName,'Isso não faz sentido...'],['Voz','Então descubra.']])}
+function startGameWithName(){const n=nameInput.value.replace(/\s+/g,' ').trim();if(n.length<2){nameError.textContent='Digite um nome com pelo menos 2 caracteres.';nameInput.focus();return}playerName=n.slice(0,16);nameScreen.style.display='none';init();S.name=playerName;S.mode='play';load('room');say([[playerName,'Onde eu estou?'],['Voz','Você está dentro de você mesmo.'],[playerName,'Isso não faz sentido...'],['Voz','Então descubra.']])}
 function normalizeLines(lines){return lines.map(a=>[a[0]==='Lucas'?playerName:a[0],String(a[1]).replace(/\bLucas\b/g,playerName)])}
 /* ---------- áudio ---------- */
 let soundOn=true;
