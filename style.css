@@ -1,0 +1,14 @@
+html,body{margin:0;height:100%;background:#070912;overflow:hidden;font-family:monospace;color:#fff;touch-action:none;user-select:none;-webkit-user-select:none}
+#app{display:flex;flex-direction:column;height:100%;align-items:center;justify-content:center}
+#nameScreen{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(5,5,18,.88);z-index:10;font-family:monospace}
+.nameCard{width:min(340px,88vw);box-sizing:border-box;padding:22px 20px;background:linear-gradient(#211942,#120f28);border:2px solid #9a8aff;box-shadow:0 0 28px rgba(154,138,255,.25),0 8px 0 #080611;text-align:center;border-radius:10px}
+.nameTitle{color:#ffe28a;font-weight:bold;font-size:18px;margin-bottom:12px}.nameText{color:#d8d2f5;font-size:11px;line-height:1.5;margin-bottom:14px}#nameInput{width:100%;box-sizing:border-box;padding:11px 10px;background:#090817;border:2px solid #6f62b5;color:#fff;outline:none;font:12px monospace;border-radius:6px;text-align:center;user-select:text;-webkit-user-select:text;touch-action:text;pointer-events:auto}#nameInput:focus{border-color:#ffe28a;box-shadow:0 0 12px rgba(255,226,138,.18)}#startBtn{width:100%;margin-top:12px;padding:11px 8px;background:linear-gradient(#5b4ba8,#392d72);border:2px solid #b5aaff;color:#fff;border-radius:6px;font:bold 11px monospace;cursor:pointer}#startBtn:active{transform:translateY(1px)}#nameError{min-height:13px;margin-top:8px;color:#ff9a9a;font-size:9px}
+canvas{image-rendering:pixelated;background:#000;display:block}
+#pad{display:none;width:100%;max-width:640px;justify-content:space-between;align-items:center;padding:6px 16px;box-sizing:border-box}
+.t #pad{display:flex}
+#dp{display:grid;grid-template-columns:repeat(3,50px);grid-template-rows:repeat(3,50px);gap:3px}
+#pad button{background:linear-gradient(#332a62,#211b45);border:2px solid #9588ff;box-shadow:0 4px 0 #110e24;color:#fff;border-radius:12px;font:bold 18px monospace;touch-action:none}
+#pad button:active{background:#5a4ab8}
+#ab{display:flex;gap:12px;align-items:center}
+#ab button{width:62px;height:62px;border-radius:50%}
+#ab #mn{width:44px;height:44px}
